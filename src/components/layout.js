@@ -4,8 +4,6 @@ import "./mystyles.scss"
 import base from './base.css'
 import Container from './container'
 import Navbar from './navbar'
-import Navigation from './navigation'
-
 
 class Template extends React.Component {
   render() {

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'gatsby';
-
 import './mystyles.scss';
 
 const Navbar = class extends React.Component {
@@ -34,13 +33,12 @@ const Navbar = class extends React.Component {
 
   render() {
     return (
-      <nav
-        className="navbar is-transparent"
-        role="navigation"
-        aria-label="main-navigation"
-      >
+      <nav className="navbar has-background-white-ter" role="navigation" aria-label="main-navigation">
         <div className="container">
           <div className="navbar-brand">
+            <a className="navbar-item" href="/">
+              <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
+            </a>
             <div
               className={`navbar-burger burger ${this.state.navBarActiveClass}`}
               data-target="navMenu"
@@ -55,25 +53,16 @@ const Navbar = class extends React.Component {
             id="navMenu"
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
-            <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
-                About
+            <div className="navbar-end has-text-centered">
+              <Link className="navbar-item" to="/projects">
+                Projects
               </Link>
-              <Link className="navbar-item" to="/products">
-                Products
+              <Link className="navbar-item" to="/photography">
+                Photography
               </Link>
               <Link className="navbar-item" to="/blog">
                 Blog
               </Link>
-            </div>
-            <div className="navbar-end has-text-centered">
-              <a
-                className="navbar-item"
-                href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-              </a>
             </div>
           </div>
         </div>
