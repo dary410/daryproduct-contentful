@@ -12,20 +12,14 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location} >
-        <div style={{ background: '#fff' }}>
+        <div className="container">
           <Helmet title={`${post.title} | ${siteTitle}`} />
           <div>
             <Img alt={post.title} fluid={post.heroImage.fluid} />
           </div>
           <div className="wrapper">
-            <h1 className="section-headline">{post.title}</h1>
-            <p
-              style={{
-                display: 'block',
-              }}
-            >
-              {post.publishDate}
-            </p>
+            <h1 className="title">{post.title}</h1>
+            <p className="text">{post.publishDate}</p>
             <div
               dangerouslySetInnerHTML={{
                 __html: post.body.childMarkdownRemark.html,
