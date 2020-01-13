@@ -4,7 +4,7 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Hero from '../components/hero'
 import Layout from "../components/layout"
-import ArticlePreview from '../components/article-preview'
+import Card from '../components/card'
 
 class BlogIndex extends React.Component {
   render() {
@@ -18,11 +18,11 @@ class BlogIndex extends React.Component {
           <Hero />
           <div className="wrapper">
             <h2 className="section-headline">Recent articles</h2>
-            <ul className="article-list">
+            <ul className="columns">
               {posts.map(({ node }) => {
                 return (
                   <li key={node.slug}>
-                    <ArticlePreview article={node} />
+                    <Card article={node} />
                   </li>
                 )
               })}

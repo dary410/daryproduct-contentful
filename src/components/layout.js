@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import "./mystyles.scss"
-import base from './base.css'
 import Container from './container'
 import Navbar from './navbar'
 

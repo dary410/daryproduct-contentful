@@ -1,10 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
-import Helmet from 'react-helmet'
 import Hero from '../components/hero'
 import Layout from '../components/layout'
-import ArticlePreview from '../components/article-preview'
+import Card from '../components/card'
 
 class RootIndex extends React.Component {
   render() {
@@ -16,17 +15,17 @@ class RootIndex extends React.Component {
       <Layout location={this.props.location} >
         <div>
           <Hero />
-          <div className="wrapper">
-            <h2 className="section-headline">Recent articles</h2>
-            <ul className="article-list">
-              {posts.map(({ node }) => {
-                return (
-                  <li key={node.slug}>
-                    <ArticlePreview article={node} />
-                  </li>
-                )
-              })}
-            </ul>
+          <div className="container">
+            <h2 className="title">Recent articles</h2>
+              <ul className="columns is-multiline">
+                {posts.map(({ node }) => {
+                  return (
+                    <li className="column is-4" key={node.slug}>
+                      <Card article={node} />
+                    </li>
+                  )
+                })}
+              </ul>
           </div>
         </div>
       </Layout>
