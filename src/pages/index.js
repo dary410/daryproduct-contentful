@@ -6,6 +6,7 @@ import Layout from '../components/layout'
 import Card from '../components/card'
 import Footer from '../components/footer'
 
+
 class RootIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
@@ -14,23 +15,20 @@ class RootIndex extends React.Component {
 
     return (
       <Layout location={this.props.location} >
-        <div>
           <Hero />
           <div className="container">
-            <h2 className="title">Recent articles</h2>
+            <h2 className="subtitle has-margin-top-50">Projects</h2>
             <ul className="columns is-multiline">
               {posts.map(({ node }) => {
                 return (
-                  <li className="column is-4" key={node.slug}>
-                    <Card article={node} />
+                  <li className="column is-4 hvr-grow hvr-grow:hover" key={node.slug}>
+                    <Card article={node}/>
                   </li>
                 )
               })}
             </ul>
           </div>
           <Footer />
-        </div>
-
       </Layout>
     )
   }

@@ -8,9 +8,11 @@
   },
   "dependencies": {
     "bulma": "^0.8.0",
+    "bulma-helpers": "^0.3.8",
     "gatsby-image": "^2.0.38",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-sass": "^2.1.27",
+    "gatsby-plugin-scroll-reveal": "0.0.4",
     "gatsby-plugin-sharp": "^2.0.34",
     "gatsby-source-contentful": "^2.0.48",
     "gatsby-transformer-remark": "^2.3.8",
@@ -20,7 +22,10 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
-    "sharp": "^0.22.0"
+    "react-pose": "^4.0.10",
+    "sal.js": "^0.7.1",
+    "sharp": "^0.22.0",
+    "simple-undo": "^1.0.2"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",

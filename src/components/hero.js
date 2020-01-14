@@ -5,7 +5,7 @@ import "./mystyles.scss"
 
 
 export default ({ data }) => (
-  <div className="hero is-medium has-background-white-ter	">
+  <div className="hero is-medium">
     <div className="hero-body">
       <div className='container'>
         <h1 className="title is-spaced">Hi, my name is Dary and I love all things products.</h1>
