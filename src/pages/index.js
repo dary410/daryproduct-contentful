@@ -16,17 +16,18 @@ class RootIndex extends React.Component {
     return (
       <Layout location={this.props.location} >
           <Hero />
-          <div className="container">
-            <h2 className="subtitle has-margin-top-50">Projects</h2>
-            <ul className="columns is-multiline">
-              {posts.map(({ node }) => {
-                return (
-                  <li className="column is-4 hvr-grow hvr-grow:hover" key={node.slug}>
-                    <Card article={node}/>
-                  </li>
-                )
-              })}
-            </ul>
+          <div className="container has-text-white-ter has-margin-bottom-50">
+            <div className="columns is-centered is-multiline">
+              <ul className="column is-8">
+                {posts.map(({ node }) => {
+                  return (
+                    <li className="column is-6 hvr-grow hvr-grow:hover" key={node.slug}>
+                      <Card article={node}/>
+                    </li>
+                  )
+                })}
+              </ul>
+            </div>
           </div>
           <Footer />
       </Layout>

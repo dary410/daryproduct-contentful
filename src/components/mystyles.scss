@@ -1,11 +1,17 @@
 @charset "utf-8";
 
-// If need, change your variables before importing Bulma
-$title-color: #ff0000;
-
-
 @import "~bulma/bulma.sass";
 @import '~bulma-helpers/bulma-helpers.sass';
+
+// If need, change your variables before importing Bulma
+$title-color: #333;
+
+.card {
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  height: 480px;
+}
 
 /* Grow */
 .hvr-grow {
