@@ -21,7 +21,7 @@ class RootIndex extends React.Component {
               <ul className="column is-8">
                 {posts.map(({ node }) => {
                   return (
-                    <li className="column is-6 hvr-grow hvr-grow:hover" key={node.slug}>
+                    <li className="column is-12-mobile is-half hvr-grow hvr-grow:hover" key={node.slug}>
                       <Card article={node}/>
                     </li>
                   )

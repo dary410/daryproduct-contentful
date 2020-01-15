@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import './mystyles.scss';
+import Logo from './logo.png'
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -37,7 +38,7 @@ const Navbar = class extends React.Component {
         <div className="container">
           <div className="navbar-brand">
             <a className="navbar-item" href="/">
-              <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
+              <img src={Logo} width="28" height="28" />
             </a>
             <div
               className={`navbar-burger burger ${this.state.navBarActiveClass}`}
@@ -54,13 +55,13 @@ const Navbar = class extends React.Component {
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
             <div className="navbar-end has-text-centered">
-              <Link className="navbar-item" to="/projects">
+              <Link className="navbar-item has-text-weight-semibold	" to="/" activeStyle={{ color: "#ffc340" }}>
                 Projects
               </Link>
-              <Link className="navbar-item" to="/photography">
+              <Link className="navbar-item has-text-weight-semibold	" to="/photography">
                 Photography
               </Link>
-              <Link className="navbar-item" to="/blog">
+              <Link className="navbar-item has-text-weight-semibold	" to="/blog">
                 Blog
               </Link>
             </div>
