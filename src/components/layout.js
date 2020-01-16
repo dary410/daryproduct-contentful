@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import "./mystyles.scss"
 import Container from './container'
 import Navbar from './navbar'
+import Footer from './footer'
 
 class Template extends React.Component {
   render() {
@@ -18,6 +19,7 @@ class Template extends React.Component {
       <Container>
         <Navbar />
         {children}
+        <Footer />
       </Container>
     )
   }
